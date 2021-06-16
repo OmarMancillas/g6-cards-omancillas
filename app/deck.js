@@ -24,7 +24,7 @@ class Deck {
             return this.cards.splice(parseInt(Math.random() * this.cards.length), 1)[0]
           }
             
-        ); 
+        );
     }
   }
   
