@@ -1,0 +1,53 @@
+doctype html
+head
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  style.
+
+    .row{
+      display:block;
+      max-width:100%;
+      text-align:center;
+      margin:0 auto;
+    }
+
+    .small-3{
+      display:inline-block;
+      width:50px;
+      margin:0 10px 10px;
+    }
+
+    .small-4{
+      display:inline-block;
+      width:200px;
+      margin:0 25px 25px;
+    }
+
+    .button{
+      width: 15%; 
+      height: 50px; 
+      border-radius: 20px
+    }
+
+
+h1(style='text-align:center') Deck
+h2
+  .row
+    each card in deck  
+      .small-3 
+        b= card 
+div(style='text-align: center')
+  form(method='get' action='/')
+    button.button(type='button' onClick='window.location.reload();') Suffle Again
+    br
+    br
+    button.button(type='submit' ) Change number of players
+  
+.row
+  each hand, key in hands
+    .small-4 
+      h1(style='text-align:center')= 'Hand ' + key
+      h2
+        b= hand
+
+                      //- .small-3 
+
