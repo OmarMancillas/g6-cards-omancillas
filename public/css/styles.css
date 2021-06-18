@@ -23,11 +23,8 @@ body {
   transform-style: preserve-3d;
   /* background-color: transparent */
 }
-.card:hover {
-  transform: rotateY(180deg);
-}
 .card[symbol=♦],
-.card[symbol=♠]{
+.card[symbol=♥]{
   color: red;
 }
 .card-corner {
@@ -36,6 +33,152 @@ body {
   text-align: center;
   position: absolute;
 }
+
+.image{
+  height: 100%;
+  width: 100%;
+  background-size: 345px;
+  /* background-image: url('/images/Cards_Transparent.png'); */
+  background-position-x: -9px;
+  background-position-y: -11px;
+}
+
+.symbols[flipped=true]{
+  background-image: url('/images/image.png');
+  z-index: 1;
+  color: transparent;
+  background-size: 900px;
+  background-position-x: -743px;
+  background-position-y: -484px;
+  border-radius: 10px;
+}
+
+.image.♠.J[flipped=true],
+.image.♠.Q[flipped=true],
+.image.♠.K[flipped=true],
+.image.♣.J[flipped=true],
+.image.♣.Q[flipped=true],
+.image.♣.K[flipped=true],
+.image.♦.J[flipped=true],
+.image.♦.Q[flipped=true],
+.image.♦.K[flipped=true],
+.image.♥.J[flipped=true],
+.image.♥.Q[flipped=true],
+.image.♥.K[flipped=true]{
+  background-image: none;
+}
+
+.image.♠.J{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -11px;
+  background-position-y: -11px;
+}
+
+.image.♠.Q{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -174px;
+  background-position-y: -11px;
+}
+
+.image.♠.K{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -339px;
+  background-position-y: -11px;
+}
+
+/* .card[symbol=♦],
+.card[symbol=♠]{ */
+
+.image.♣.J{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -11px;
+  background-position-y: 239px;
+}
+
+.image.♣.Q{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -174px;
+  background-position-y: 239px;
+}
+
+.image.♣.K{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -338px;
+  background-position-y: 239px;
+}
+
+.image.♦.J{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -11px;
+  background-position-y: -491px;
+}
+
+.image.♦.Q{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -174px;
+  background-position-y: -491px;
+}
+
+.image.♦.K{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -337px;
+  background-position-y: -491px;
+}
+
+.image.♥.J{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -11px;
+  background-position-y: -251px;
+}
+
+.image.♥.Q{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: 326px;
+  background-position-y: -251px;
+}
+
+.image.♥.K{
+  height: 100%;
+  width: 100%;
+  background-size: 500px;
+  background-image: url('/images/Cards_Transparent.png');
+  background-position-x: -338px;
+  background-position-y: -251px;
+}
+
 .top-left {
   top: 0px;
   left: 0px;
@@ -52,6 +195,13 @@ body {
 .symbols div {
   position: absolute;
   font-size: 50px;
+}
+
+.card[number="A"] .symbols div:nth-child(1){
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 150px;
 }
 
 .card[number="2"] .symbols div:nth-child(1),

@@ -59,5 +59,5 @@ app.get('/hands', (req, res) => {
 });
 
 app.listen(4001, () => {
-  console.log('Server running on port 4001');
+  // console.log('Server running on port 4001');
 });
